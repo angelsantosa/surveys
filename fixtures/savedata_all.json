@@ -1,0 +1,1221 @@
+[
+{
+  "fields": {
+    "name": "CACEI Taller Autoevaluaci\u00f3n [plantilla]",
+    "redirect_url": "/encuesta/finalizada/"
+  },
+  "model": "questionnaire.questionnaire",
+  "pk": 1
+},
+{
+  "fields": {
+    "checks": "",
+    "questionnaire": 1,
+    "text_es": "Contenidos y Materiales",
+    "sortid": 1,
+    "heading": "Contenidos y Materiales"
+  },
+  "model": "questionnaire.questionset",
+  "pk": 1
+},
+{
+  "fields": {
+    "checks": "",
+    "questionnaire": 1,
+    "text_es": "Desempe\u00f1o del Instructor",
+    "sortid": 2,
+    "heading": "Desempe\u00f1o del Instructor"
+  },
+  "model": "questionnaire.questionset",
+  "pk": 2
+},
+{
+  "fields": {
+    "checks": "",
+    "questionnaire": 1,
+    "text_es": "Organizaci\u00f3n e Instalaciones",
+    "sortid": 3,
+    "heading": "Organizaci\u00f3n e Instalaciones"
+  },
+  "model": "questionnaire.questionset",
+  "pk": 3
+},
+{
+  "fields": {
+    "checks": "",
+    "questionnaire": 1,
+    "text_es": "Opinion Integral del Taller",
+    "sortid": 4,
+    "heading": "Opinion Integral del Taller"
+  },
+  "model": "questionnaire.questionset",
+  "pk": 4
+},
+{
+  "fields": {
+    "checks": "",
+    "questionnaire": 1,
+    "text_es": "Comentarios adicionales (Opcional)",
+    "sortid": 5,
+    "heading": "Comentarios adicionales (Opcional)"
+  },
+  "model": "questionnaire.questionset",
+  "pk": 5
+},
+{
+  "fields": {
+    "checks": "",
+    "questionnaire": 1,
+    "text_es": "Recomendaciones para mejorar el taller",
+    "sortid": 6,
+    "heading": "Recomendaciones para mejorar el taller"
+  },
+  "model": "questionnaire.questionset",
+  "pk": 6
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 1,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 1
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 1,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 2
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 1,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 3
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 1,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 4
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 1,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 5
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 2,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 6
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 2,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 7
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 2,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 8
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 2,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 9
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 2,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 10
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 3,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 11
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 3,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 12
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 3,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 13
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 3,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 14
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 3,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 15
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 4,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 16
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 4,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 17
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 4,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 18
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 4,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 19
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 4,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 20
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 5,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 21
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 5,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 22
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 5,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 23
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 5,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 24
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 5,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 25
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 6,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 26
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 6,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 27
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 6,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 28
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 6,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 29
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 6,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 30
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 7,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 31
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 7,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 32
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 7,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 33
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 7,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 34
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 7,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 35
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 8,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 36
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 8,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 37
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 8,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 38
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 8,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 39
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 8,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 40
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 9,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 41
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 9,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 42
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 9,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 43
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 9,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 44
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 9,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 45
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 11,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 51
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 11,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 52
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 11,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 53
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 11,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 54
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 11,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 55
+},
+{
+  "fields": {
+    "text_es": "Excelente",
+    "question": 17,
+    "sortid": 1,
+    "value": "Excelente",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 56
+},
+{
+  "fields": {
+    "text_es": "Bueno",
+    "question": 17,
+    "sortid": 2,
+    "value": "Bueno",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 57
+},
+{
+  "fields": {
+    "text_es": "Regular",
+    "question": 17,
+    "sortid": 3,
+    "value": "Regular",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 58
+},
+{
+  "fields": {
+    "text_es": "Malo",
+    "question": 17,
+    "sortid": 4,
+    "value": "Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 59
+},
+{
+  "fields": {
+    "text_es": "Muy Malo",
+    "question": 17,
+    "sortid": 5,
+    "value": "Muy Malo",
+    "tags": ""
+  },
+  "model": "questionnaire.choice",
+  "pk": 60
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "1.1",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "\u00bfConsidera que el taller present\u00f3 informaci\u00f3n relevante para su participaci\u00f3n como evaluador en el proceso de acreditaci\u00f3n?",
+    "questionset": 1,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 1
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "1.2",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfC\u00f3mo considera los conocimeintos y habilidades adquiridos para afrontar el proceso de acreditaci\u00f3n en una instituci\u00f3n?\r\n",
+    "questionset": 1,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 2
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "1.3",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " La calidad de los materiales proporcionados (presentaciones y ejercicios) para el desarrollo de las tareas durante el taller es...",
+    "questionset": 1,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 3
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "1.4",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfC\u00f3mo eval\u00faa su aprendizaje para afrontar su tarea como evaluador?",
+    "questionset": 1,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 4
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "3.1",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfC\u00f3mo eval\u00faa la atenci\u00f3n recibida por parte del personal del CACEI?",
+    "questionset": 3,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 5
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "3.2",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfC\u00f3mo eval\u00faa las instalaciones donde se llev\u00f3 a cabo el taller (ventialci\u00f3n, higiene, iluminaci\u00f3n, mobiliario, etc.)?",
+    "questionset": 3,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 6
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "3.3",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfC\u00f3mo eval\u00faa la informaci\u00f3n que se le proporciona por parte del CACEI sobre el taller?",
+    "questionset": 3,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 7
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "2.1",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfC\u00f3mo eval\u00faa el domino del tema por parte del facilitador?",
+    "questionset": 2,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 8
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "2.2",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " \u00bfEl facilitador foment\u00f3 su aprendizaje para su desempe\u00f1o como tutor?",
+    "questionset": 2,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 9
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "2.3",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": " La capacidad del instructor para mediar y resolver preguntas es...",
+    "questionset": 2,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 11
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "4.1",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "En general, \u00bfC\u00f3mo evalua el taller?",
+    "questionset": 4,
+    "type": "choice",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 17
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "4.2",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "\u00bfPor qu\u00e9?",
+    "questionset": 4,
+    "type": "open-textfield",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 18
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "5.1",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "Felicitaciones",
+    "questionset": 5,
+    "type": "open-textfield",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 19
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "5.2",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "Sugerencias",
+    "questionset": 5,
+    "type": "open-textfield",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 20
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "5.3",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "Quejas",
+    "questionset": 5,
+    "type": "open-textfield",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 21
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "6.1",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "Escriba sus recomendaciones",
+    "questionset": 6,
+    "type": "open-textfield",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 22
+},
+{
+  "fields": {
+    "footer_es": "",
+    "number": "2.4",
+    "extra_es": "",
+    "sort_id": null,
+    "text_es": "Si quieres aportar comentarios adicionales sobre el desempe\u00f1o del instructor, escr\u00edbelos en el siguiente espacio.",
+    "questionset": 2,
+    "type": "open-textfield",
+    "checks": ""
+  },
+  "model": "questionnaire.question",
+  "pk": 23
+},
+{
+  "fields": {
+    "domain": "cacei.org.mx",
+    "name": "cacei.org.mx"
+  },
+  "model": "sites.site",
+  "pk": 1
+},
+{
+  "fields": {
+    "name": "Ingenier\u00edas",
+    "modified": "2015-11-09T19:37:00.137Z",
+    "created": "2015-11-09T19:37:00.137Z"
+  },
+  "model": "formulario.niveltaller",
+  "pk": 1
+},
+{
+  "fields": {
+    "name": "TSU",
+    "modified": "2015-11-09T19:37:05.009Z",
+    "created": "2015-11-09T19:37:05.009Z"
+  },
+  "model": "formulario.niveltaller",
+  "pk": 2
+},
+{
+  "fields": {
+    "plantilla": 1,
+    "name": "Autoevaluaci\u00f3n",
+    "modified": "2015-11-09T19:38:31.619Z",
+    "created": "2015-11-09T19:37:24.286Z"
+  },
+  "model": "formulario.tipotaller",
+  "pk": 1
+},
+{
+  "fields": {
+    "plantilla": 1,
+    "name": "Pares evaluadores",
+    "modified": "2015-11-09T19:37:33.950Z",
+    "created": "2015-11-09T19:37:33.950Z"
+  },
+  "model": "formulario.tipotaller",
+  "pk": 2
+},
+{
+  "fields": {
+    "plantilla": 1,
+    "name": "Actualizaci\u00f3n  en el uso del sistema",
+    "modified": "2015-11-09T19:37:43.651Z",
+    "created": "2015-11-09T19:37:43.651Z"
+  },
+  "model": "formulario.tipotaller",
+  "pk": 3
+},
+{
+  "fields": {
+    "plantilla": 1,
+    "name": "ABET",
+    "modified": "2015-11-09T19:37:51.241Z",
+    "created": "2015-11-09T19:37:51.241Z"
+  },
+  "model": "formulario.tipotaller",
+  "pk": 4
+},
+{
+  "fields": {
+    "plantilla": 1,
+    "name": "Talleres virtuales",
+    "modified": "2015-11-09T19:38:00.813Z",
+    "created": "2015-11-09T19:38:00.813Z"
+  },
+  "model": "formulario.tipotaller",
+  "pk": 5
+},
+{
+  "fields": {
+    "plantilla": 1,
+    "name": "Otro",
+    "modified": "2015-11-10T17:44:06.241Z",
+    "created": "2015-11-10T17:44:06.241Z"
+  },
+  "model": "formulario.tipotaller",
+  "pk": 6
+},
+{
+  "fields": {
+    "name": "City express Universidad",
+    "created": "2015-11-09T19:38:49.052Z",
+    "modified": "2015-12-14T20:27:09.204Z",
+    "direccion": "1",
+    "institucion": "1",
+    "enlace": 1
+  },
+  "model": "formulario.sede",
+  "pk": 1
+},
+{
+  "fields": {
+    "name": "Universidad de progreso",
+    "created": "2015-11-09T19:38:56.932Z",
+    "modified": "2015-12-14T20:26:50.733Z",
+    "direccion": "1",
+    "institucion": "1",
+    "enlace": 1
+  },
+  "model": "formulario.sede",
+  "pk": 2
+},
+{
+  "fields": {
+    "name": "CACEI",
+    "created": "2015-11-09T19:39:03.287Z",
+    "modified": "2015-12-14T20:26:41.283Z",
+    "direccion": "dsddsdsds",
+    "institucion": "sddsdsds",
+    "enlace": 1
+  },
+  "model": "formulario.sede",
+  "pk": 3
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:56:15.723Z",
+    "telefono": "",
+    "name": "Froylan P\u00e9rez Armetia",
+    "modified": "2015-12-04T22:11:54.891Z",
+    "email": "dobeslao@gmail.com"
+  },
+  "model": "formulario.instructor",
+  "pk": 1
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:56:26.582Z",
+    "telefono": "",
+    "name": "Mario Enriquez",
+    "modified": "2015-12-04T22:11:47.389Z",
+    "email": "dobeslao@gmail.com"
+  },
+  "model": "formulario.instructor",
+  "pk": 2
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:56:37.261Z",
+    "telefono": "",
+    "name": "Ricardo Olvera",
+    "modified": "2015-12-04T22:11:39.330Z",
+    "email": "dobeslao@gmail.com"
+  },
+  "model": "formulario.instructor",
+  "pk": 3
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:56:51.305Z",
+    "telefono": "",
+    "name": "Lupita",
+    "modified": "2015-12-04T23:16:46.175Z",
+    "email": ""
+  },
+  "model": "formulario.apoyoinstructor",
+  "pk": 1
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:57:13.397Z",
+    "telefono": "",
+    "name": "Juanita",
+    "modified": "2015-12-04T23:16:36.133Z",
+    "email": ""
+  },
+  "model": "formulario.apoyoinstructor",
+  "pk": 2
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:57:28.254Z",
+    "telefono": "",
+    "name": "Carlos Ponce",
+    "modified": "2015-12-04T22:12:14.696Z",
+    "email": "dobeslao@gmail.com"
+  },
+  "model": "formulario.contacto",
+  "pk": 1
+},
+{
+  "fields": {
+    "created": "2015-11-09T19:57:34.654Z",
+    "telefono": "",
+    "name": "Luis Estrada",
+    "modified": "2015-12-04T22:12:07.061Z",
+    "email": "dobeslao@gmail.com"
+  },
+  "model": "formulario.contacto",
+  "pk": 2
+},
+{
+  "fields": {
+    "created": "2015-11-24T21:39:38.349Z",
+    "telefono": "",
+    "name": "Enrique",
+    "modified": "2015-12-16T19:40:13.291Z",
+    "email": "dobeslao@gmail.com"
+  },
+  "model": "formulario.responsable",
+  "pk": 1
+},
+{
+  "fields": {
+    "created": "2015-11-24T21:39:45.450Z",
+    "telefono": "",
+    "name": "Maestra",
+    "modified": "2015-12-16T19:40:37.532Z",
+    "email": "starchox@gmail.com"
+  },
+  "model": "formulario.responsable",
+  "pk": 2
+},
+{
+  "fields": {
+    "created": "2015-11-24T21:56:53.472Z",
+    "telefono": null,
+    "name": "Sistema",
+    "modified": "2015-11-24T21:56:53.472Z",
+    "email": ""
+  },
+  "model": "formulario.responsable",
+  "pk": 3
+},
+{
+  "fields": {
+    "created": "2015-12-04T18:12:38.679Z",
+    "telefono": "",
+    "name": "Persona",
+    "modified": "2015-12-04T18:12:38.679Z",
+    "email": ""
+  },
+  "model": "formulario.enlace",
+  "pk": 1
+},
+{
+  "fields": {
+    "responsable": 1,
+    "name": "Direcci\u00f3n General",
+    "modified": "2015-11-24T21:57:46.434Z",
+    "created": "2015-11-24T21:40:21.024Z"
+  },
+  "model": "formulario.unidad",
+  "pk": 1
+},
+{
+  "fields": {
+    "responsable": 2,
+    "name": "Direcci\u00f3n T\u00e9cnica",
+    "modified": "2015-11-24T21:40:34.913Z",
+    "created": "2015-11-24T21:40:34.913Z"
+  },
+  "model": "formulario.unidad",
+  "pk": 2
+},
+{
+  "fields": {
+    "responsable": 2,
+    "name": "Direcci\u00f3n Administrativa",
+    "modified": "2015-11-24T21:40:45.224Z",
+    "created": "2015-11-24T21:40:45.224Z"
+  },
+  "model": "formulario.unidad",
+  "pk": 3
+},
+{
+  "fields": {
+    "responsable": 3,
+    "name": "Instructor",
+    "modified": "2015-11-24T21:57:16.431Z",
+    "created": "2015-11-24T21:57:16.431Z"
+  },
+  "model": "formulario.unidad",
+  "pk": 4
+},
+{
+  "fields": {
+    "responsable": 3,
+    "name": "Apoyo",
+    "modified": "2015-11-24T21:57:30.480Z",
+    "created": "2015-11-24T21:57:30.480Z"
+  },
+  "model": "formulario.unidad",
+  "pk": 5
+},
+{
+  "fields": {
+    "body_es": "Bienvenido al sitio de creaci\u00f3n de encuestas del CACEI\r\n\r\nSi deseas tomar un cuestionario de ejemplo, iniciar en: /take/1\r\n\r\nUtiliza la interfaz de administrador: /admin/, para cambiar el cuestionario.\r\n\r\nCrear Nueva Encuesta\r\n\r\n<br/>\r\nAsistente de creaci\u00f3n de encuestas en: /encuesta/\r\n\r\n<br/>\r\nListado de encuestas en: /encuesta/listado/",
+    "title_es": "Bienvenido",
+    "public": true
+  },
+  "model": "page.page",
+  "pk": "index"
+}
+]

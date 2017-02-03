@@ -1,0 +1,5 @@
+{% if request.user.is_authenticated %}
+    {% include "_dashboard.html" %}
+{% else %}
+    {% include "_landing_page.html" %}        
+{% endif %}

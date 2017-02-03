@@ -1,0 +1,147 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+{% load url from future %}
+{% load bootstrap %}
+
+{% block extra_script %}
+	<script type="text/javascript" src="{% static 'plugins/highcharts/highcharts.js' %}"></script>
+ 	<script>
+		$(function () {
+		{% for results in data %}
+			{% for question in results.questions %}
+				{% if question.type == 'choice' %}
+		            	var data_{{question.id}} = '{{ question.jsonstr|escapejs }}';
+
+					$('#container{{question.id}}').highcharts({
+						chart: {
+							plotBackgroundColor: null,
+							plotBorderWidth: null,
+							plotShadow: false,
+							type: 'pie'
+						},
+						credits: {
+							enabled: false,
+						},
+						title: {
+							//text: '{{question.text|escapejs}}',
+							text: null,
+						},
+						tooltip: {
+							pointFormat: '{series.name}: {point.y} ({point.percentage:.1f}%)</b>'
+						},
+						plotOptions: {
+							pie: {
+								allowPointSelect: true,
+								cursor: 'pointer',
+								dataLabels: {
+									enabled: true,
+									format: '<b>{point.name}</b>: {point.y} ({point.percentage:.1f}%)',
+									style: {
+										color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+									}
+								},
+								size: 170,
+							}
+						},
+						series: [{
+							name: 'Resultado',
+							colorByPoint: true,
+							// Interpreta la cadena recibida como JSON
+							data: JSON.parse(data_{{question.id}})
+						}]
+					});
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+		});
+		
+	</script>
+{% endblock %}
+
+{% block extra_script_ready %}
+	/**
+	 * Función auxiliar para hacer el cambio de sección de la encuesta
+	 * Realiza la petición en el navegador con el parametro actual seleccionado
+	 */
+	$('#questionset_list').change(function() {
+		if ($(this).val()) {
+			var url = 'http://{{ request.get_host }}{% url 'resultado_short' questionnaire_id %}' + $(this).val() + '/';
+			window.location.href = url;
+		}
+	});
+
+	$("#questionset_list").val("{{questionset_id}}").focus();
+{% endblock %}
+
+{% block body %}
+	
+	<h3>
+		RESULTADOS DE ENCUESTAS
+	</h3>
+
+	<a id="listado" href="{% url 'listado' %}" type="button" class="btn btn-light-grey">
+		Listado de encuestas
+		<i class="fa fa-th-list fa-lg"></i>
+	</a>
+	
+	<div class="form-group">
+		<label for="questionset_list">
+		</label>
+		<select id="questionset_list" class="form-control">
+			{% for set in question_set %}
+				<option value="{{set.id}}">{{set.heading}}</option>
+			{% endfor %}
+			<option value="0">-- Mostrar todas --</option>
+		</select>
+	</div>
+
+{% for results in data %}
+	<div class="panel-body">
+		<h3>{{results.question_set_name}}</h3>
+		<div class="row">
+		{% for question in results.questions %}
+			{% if question.type == 'choice' %}
+			<div class="col-md-6">
+					<h4>{{question.text}} ({{question.count}})</h4>
+					
+						<div id="container{{question.id}}" style="width:100%; height:280px;"></div>
+			</div>
+			{% endif %}
+		{% endfor %}
+		</div>
+		
+		{% for question in results.open_questions %}
+			
+			<div class="panel panel-white">
+				<div class="panel-body">
+				<h3>{{question.question}} ({{question.count}}), No contestados ({{question.count_na}})</h3>
+					<div class="panel-scroll height-200 ps-container">
+						<!-- content -->
+						
+						{% for answer in question.answer %}
+							<span style="font-size:14px;">{{answer}}</span><br>
+						{% endfor %}
+						<!-- /content -->
+						<!-- scroll -->
+						<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; width: 446px; display: none;">
+							<div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+						</div>
+						<div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 250px; display: inherit;">
+							<div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+						</div>
+						<!-- /scroll -->
+					</div>
+				</div>
+			</div>	
+			
+		{% endfor %}
+	</div>
+{% endfor %}
+	
+{% endblock %}
+
+{% block nav %}
+{% include "_menu.html" %}
+{% endblock %}

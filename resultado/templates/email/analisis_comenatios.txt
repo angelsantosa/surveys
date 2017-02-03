@@ -1,0 +1,10 @@
+Estimado {{ usuario }},
+
+El resultado del análisis para {{ unidad }}, se presentan en el archivo adjunto.
+
+    Tipo taller:	{{ tipo_taller }}
+    Fecha taller:	{{ fecha_taller }}
+    Sede:	        {{ sede }}
+
+Atentamente:
+CACEI: Consejo de Acreditación de la Enseñanza de la Ingeniería, A. C.

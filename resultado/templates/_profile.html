@@ -1,0 +1,137 @@
+<div class="profile hide">
+	<table class="table table-striped" id="sample-table-3">
+		<tbody>
+			<tr>
+				<td><i class="fa fa-flag fa-lg"></i> Nivel de taller</td>
+				<td>{{formulario.nivel_taller}}</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-file-text-o fa-lg"></i> Tipo de taller</td>
+				<td>{{formulario.tipo_taller}}</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-calendar fa-lg"></i> Fecha de taller</td>
+				<td>{{formulario.fecha_taller}}</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-building-o fa-lg"></i> Sede</td>
+				<td>{{formulario.sede}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="col-xs-8 col-md-8">
+
+					<table class="table" id="sample-table-4">
+						<tbody>
+							<tr>
+								<td><i class="fa fa-home fa-lg"></i> Instituci&oacute;n</td>
+								<td>{{formulario.sede.institucion}}</td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-map-marker fa-lg"></i> Direcci&oacute;n</td>
+								<td class="col-xs-8 col-md-8">{{formulario.sede.direccion}}</td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-male fa-lg"></i> Enlace</td>
+								<td>{{formulario.sede.enlace.name}}</td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-envelope-o fa-lg pull-right"></i></td>
+								<td>
+									{% if formulario.sede.enlace.email %}
+										{{formulario.sede.enlace.email}}
+									{% else %}
+										<i>No hay informaci&oacute;n</i>
+									{% endif %}
+								</td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-phone fa-lg pull-right"></i></td>
+								<td>
+									{% if formulario.sede.enlace.telefono %}
+										{{formulario.sede.enlace.telefono}}
+									{% else %}
+										<i>No hay informaci&oacute;n</i>
+									{% endif %}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-graduation-cap fa-lg"></i> Instructor</td>
+				<td>{{formulario.instructor.name}}</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-envelope-o fa-lg pull-right"></i></td>
+				<td>
+					{% if formulario.instructor.email %}
+						{{formulario.instructor.email}}
+					{% else %}
+						<i>No hay informaci&oacute;n</i>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-phone fa-lg pull-right"></i></td>
+				<td>
+					{% if formulario.instructor.telefono %}
+						{{formulario.instructor.telefono}}
+					{% else %}
+						<i>No hay informaci&oacute;n</i>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-support fa-lg"></i> Apoyo</td>
+				<td>{{formulario.apoyo.name}}</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-envelope-o fa-lg pull-right"></i></td>
+				<td>
+					{% if formulario.apoyo.email %}
+						{{formulario.apoyo.email}}
+					{% else %}
+						<i>No hay informaci&oacute;n</i>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-phone fa-lg pull-right"></i></td>
+				<td>
+					{% if formulario.apoyo.telefono %}
+						{{formulario.apoyo.telefono}}
+					{% else %}
+						<i>No hay informaci&oacute;n</i>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-user fa-lg"></i> Contacto</td>
+				<td>{{formulario.contacto.name}}</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-envelope-o fa-lg pull-right"></i></td>
+				<td>
+					{% if formulario.contacto.email %}
+						{{formulario.contacto.email}}
+					{% else %}
+						<i>No hay informaci&oacute;n</i>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-phone fa-lg pull-right"></i></td>
+				<td>
+					{% if formulario.contacto.telefono %}
+						{{formulario.contacto.telefono}}
+					{% else %}
+						<i>No hay informaci&oacute;n</i>
+					{% endif %}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

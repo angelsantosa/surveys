@@ -1,0 +1,39 @@
+{% extends "base_rapido.html" %}
+
+{% load staticfiles %}
+{% load metron_tags %}
+{% load i18n %}
+
+{% block extra_style %}
+{% endblock %}
+
+{% block extra_head %}
+{% endblock %}
+
+{% block account_bar %}
+{% include "_user_dropdown.html" %}
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block account_pageslide_left %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block extra_body_base %}
+    {% analytics %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+    {% include "_footer.html" %}
+{% endblock %}
+
+{% block extra_script %}
+{% endblock %}
+
+{% block extra_script_ready %}
+{% endblock %}

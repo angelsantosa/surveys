@@ -1,0 +1,171 @@
+{% extends "site_base.html" %}
+{% load widget_tweaks %}
+{% load staticfiles %}
+{% load url from future %}
+{% load bootstrap %}
+
+{% block extra_style %}
+<style type="text/css">
+#enlace_type {
+    list-style-type: none;
+}
+</style>
+{% endblock %}
+
+{% block extra_script_ready %}
+var radio_existente = function() {
+    $("div#enlace_EX").show("slow");
+    $("div#enlace_NU").hide();
+};
+
+var radio_nuevo = function() {
+    $("div#enlace_EX").hide();
+    $("div#enlace_NU").show("slow");
+};
+
+/*
+ * Inicialización del iCheck
+ */
+if ($.fn.iCheck) {
+    if ($('input[type="radio"]').length) {
+        $('input[type="radio"].grey').iCheck({
+            radioClass: 'iradio_square-orange',
+            increaseArea: '10%' // optional
+        });
+    }
+}
+
+/*
+ * Callback al hacer clic sobre el iCheck radio
+ */
+$('input.radio-callback').on('ifChecked', function(event) {
+		console.log('checked ' + $(this).val() + ' radio button');
+        if ($(this).val() == 'EX') {
+            radio_existente();
+        } else {
+            radio_nuevo();
+        }
+});
+
+if ($('input[type="radio"]:checked').val() == "EX") {
+    radio_existente();
+} else {
+    radio_nuevo();
+}
+{% endblock %}
+
+{% block body %}
+
+
+<form role="form" autocomplete="off" class="form-register" method="post" autocapitalize="off">
+{% csrf_token %}
+
+<h3>
+Asistente para Generaci&oacute;n de Sede CACEI
+</h3>
+
+{% if messages %}
+<div class="alert alert-success">
+	<strong>
+		{% for message in messages %}
+			{{ message }}
+		{% endfor %}
+	</strong>
+</div>
+{% endif %}
+
+<div class="panel-body">
+	<fieldset>
+        <div class="form-group">
+            <label for="name">
+                <i class="fa fa-building-o fa-lg"></i>
+                Nombre de Sede
+                <span class="symbol required"></span>
+            </label>
+            {% render_field form.name class+="form-control" id=form.name.html_name %}
+            {{ form.name.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="institucion">
+                <i class="fa fa-home fa-lg"></i>
+                {{ form.institucion.label }}
+                <span class="symbol required"></span>
+            </label>
+            {% render_field form.institucion class+="form-control" id=form.institucion.html_name %}
+            {{ form.institucion.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">
+                <i class="fa fa-map-marker fa-lg"></i>
+                {{ form.direccion.label }}
+                <span class="symbol required"></span>
+            </label>
+            {% render_field form.direccion class+="form-control" id=form.direccion.html_name %}
+            {{ form.direccion.errors }}
+        </div>
+
+
+        <div class="form-group">
+            <label for="enlace_type">
+                <i class="fa  fa-puzzle-piece fa-lg"></i>
+                {{ form.enlace_type.label }}
+            </label>
+            {% render_field form.enlace_type id=form.enlace_type.html_name class+="gray square-orange radio-callback" %}
+            {{ form.enlace_type.errors }}
+        </div>
+<div style="height: 220px;">
+	<div id="enlace_EX">
+        <div class="form-group">
+            <label for="enlace">
+                <i class="fa fa-male fa-lg"></i>
+                {{ form.enlace.label }}
+                <span class="symbol required"></span>
+            </label>
+            {% render_field form.enlace class+="form-control" id=form.enlace.html_name %}
+            {{ form.enlace.errors }}
+        </div>
+	</div>
+	<div id="enlace_NU">
+        <div class="form-group">
+            <label for="enlace_name">
+                <i class="fa fa-male fa-lg"></i>
+                {{ form.enlace_name.label }}
+                <span class="symbol required"></span>
+            </label>
+            {% render_field form.enlace_name class+="form-control" id=form.enlace_name.html_name %}
+            {{ form.enlace_name.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="enlace_email">
+                <i class="fa fa-envelope-o fa-lg"></i>
+                {{ form.enlace_email.label }}
+            </label>
+            {% render_field form.enlace_email class+="form-control" id=form.enlace_email.html_name %}
+            {{ form.enlace_email.errors }}
+        </div>
+        <div class="form-group">
+            <label for="enlace_telefono">
+                <i class="fa fa-phone fa-lg"></i>
+                {{ form.enlace_telefono.label }}
+            </label>
+            {% render_field form.enlace_telefono class+="form-control" id=form.enlace_telefono.html_name %}
+            {{ form.enlace_telefono.errors }}
+        </div>
+	</div>
+</div>
+
+
+</fieldset>
+</div>
+<button class="btn btn-primary pull-right" type="submit">Crear!</button>
+
+</form>
+
+{% endblock %}
+
+{% block nav %}
+{% include "_menu.html" with a_crear_sede="active" %}
+{% endblock %}

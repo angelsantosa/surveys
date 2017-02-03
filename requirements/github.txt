@@ -1,0 +1,40 @@
+# Python libraries to install directly from github
+# 
+# A correct GitHub reference looks like this:
+#
+#   git+https://github.com/OWNER/REPO-NAME.git@TAG-OR-SHA#egg=KIT-NAME==VERSION
+#
+# For example:
+#
+#   git+https://github.com/example/example-lint.git@v0.3.2#egg=example_lint==0.3.2
+#
+# where:
+#
+#   OWNER = example
+#   REPO-NAME = example-lint
+#   TAG-OR-SHA = v0.3.2
+#   KIT-NAME = example_lint
+#   VERSION = 0.3.2
+#
+#
+# Rules to follow (even though many URLs here don't follow them!):
+#
+#   * Don't leave out any of these pieces.
+#
+#   * Don't use -e
+#
+#   * TAG-OR-SHA must be a git tag, or a git SHA.  Don't use branch names here.
+#
+#   * KIT-NAME might be different than REPO-NAME.  KIT-NAME must be the same as
+#     the `name="KIT-NAME"` value in the repo's setup.py.
+#
+#   * VERSION might not be the same as TAG-OR-SHA, but if the tag names the
+#     version, please make it match the VERSION, but with a "v" prefix.
+#     VERSION must be the same as the `version="VERSION"` value in the repo's
+#     setup.py.  An alternative is to use 0.0 as VERSION: this forces pip to
+#     re-install the package each time, and can be useful when working with two
+#     repos before picking a version number. Don't use 0.0 on master, only for
+#     tight-loop work in progress.
+
+# ED Questionnaire
+-e git+https://github.com/eldest-daughter/ed-questionnaire.git@d41aaf8f376cdae025cdefdb8b4c9156b1de7db8#egg=ed-questionnaire==2.0.1

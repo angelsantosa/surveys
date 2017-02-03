@@ -1,0 +1,16 @@
+<!-- start: USER DROPDOWN -->
+<li class="dropdown current-user">
+	<a class="dropdown-toggle" data-close-others="true" href="{% url 'account_logout' %}">
+		<span class="username hidden-xs">
+			<b>
+				{% if request.user.last_name or request.user.first_name %}
+					{{ request.user.get_full_name }}
+				{% else %}
+					{{ request.user.username }}
+				{% endif %}
+			</b>
+		</span>
+		<i class="glyphicon glyphicon-log-in"></i>
+	</a>
+</li>
+<!-- end: USER DROPDOWN -->

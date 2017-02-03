@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Victor Safronivich <vsafronovich@gmail.com>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.0\n"
+"Report-Msgid-Bugs-To: Victor Safronivich <vsafronovich@gmail.com>\n"
+"POT-Creation-Date: 2012-08-24 09:15+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Victor Safronivich <vsafronovich@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: .\models.py:16
+msgid "Active"
+msgstr "Activa"
+
+#: .\models.py:17
+msgid "Inactive"
+msgstr "In activa"
+
+#: .\models.py:22
+msgid "State"
+msgstr "Estado"
+
+#: .\models.py:24
+msgid "Surname"
+msgstr "Alias"
+
+#: .\models.py:26
+msgid "Given name"
+msgstr "Nombre"
+
+#: .\models.py:27
+msgid "Email"
+msgstr "Correo electronico"
+
+#: .\models.py:29
+msgid "Gender"
+msgstr "Genero"
+
+#: .\models.py:30
+msgid "Unset"
+msgstr "Неважно"
+
+#: .\models.py:31
+msgid "Masculino"
+msgstr "Мужской"
+
+#: .\models.py:32
+msgid "Femenino"
+msgstr "Женский"
+
+#: .\models.py:35
+msgid "Next Run"
+msgstr "Next run"
+
+#: .\models.py:37
+msgid "Form Type"
+msgstr "Тип формы"
+
+#: .\models.py:39
+msgid "Subject receives emails"
+msgstr "Тема полученного письма"
+
+#: .\models.py:40
+msgid "Subject is sent paper form"
+msgstr ""
+
+#: .\models.py:43
+msgid "Language"
+msgstr "Language"
+
+#: .\views.py:805 .\templates\questionnaire\choice-yesnocomment.html.py:10
+msgid "Yes"
+msgstr "Si"
+
+#: .\views.py:805 .\templates\questionnaire\choice-yesnocomment.html.py:18
+msgid "No"
+msgstr "No"
+
+#: .\views.py:807 .\templates\questionnaire\choice-yesnocomment.html.py:27
+msgid "Don't Know"
+msgstr "No lo se"
+
+#: .\qprocessors\choice.py:38 .\qprocessors\simple.py:68
+msgid "You must select an option"
+msgstr "Debe seleccionar una opción"
+
+#: .\qprocessors\choice.py:42 .\qprocessors\simple.py:72
+#: .\qprocessors\simple.py:74 .\qprocessors\simple.py:76
+#: .\qprocessors\simple.py:79 .\qprocessors\timeperiod.py:56
+msgid "Field cannot be blank"
+msgstr "El espacio no debe estar en blanco"
+
+#: .\qprocessors\choice.py:47
+msgid "Invalid option!"
+msgstr "Opcion invalida"
+
+#: .\qprocessors\choice.py:108
+#, python-format
+msgid "You must select at least %d option"
+msgid_plural "You must select at least %d options"
+msgstr[0] "Вы должны выбрать как минимум %d ответ"
+msgstr[1] "Вы должны выбрать как минимум %d ответа"
+msgstr[2] "Вы должны выбрать как минимум %d ответов"
+
+#: .\qprocessors\custom.py:27
+msgid "Processor not defined for this question"
+msgstr "Для этого вопроса не определен обработчик"
+
+#: .\qprocessors\range.py:41
+msgid "Out of range"
+msgstr "Fuera de rango"
+
+#: .\qprocessors\timeperiod.py:5
+msgid "second(s)"
+msgstr "segundo(s)"
+
+#: .\qprocessors\timeperiod.py:6
+msgid "minute(s)"
+msgstr "minuto(s)"
+
+#: .\qprocessors\timeperiod.py:7
+msgid "hour(s)"
+msgstr "hora(s)"
+
+#: .\qprocessors\timeperiod.py:8
+msgid "day(s)"
+msgstr "dia(s)"
+
+#: .\qprocessors\timeperiod.py:9
+msgid "week(s)"
+msgstr "semana(s)"
+
+#: .\qprocessors\timeperiod.py:10
+msgid "month(s)"
+msgstr "mes(es)"
+
+#: .\qprocessors\timeperiod.py:11
+msgid "year(s)"
+msgstr "año(s)"
+
+#: .\qprocessors\timeperiod.py:42 .\qprocessors\timeperiod.py:58
+msgid "Invalid time period"
+msgstr "Fecha invalida"
+
+#: .\qprocessors\timeperiod.py:48
+msgid "Time period must be a whole number"
+msgstr "Fecha unicamente con numeros"
+
+#: .\templates\admin\questionnaire\question\change_form.html.py:10
+msgid "Choices"
+msgstr "Opciones"
+
+#: .\templates\admin\questionnaire\question\change_form.html.py:12
+msgid "Sortid determines the choice order."
+msgstr "Поле обозначает порядок ответов"
+
+#: .\templates\admin\questionnaire\question\change_form.html.py:13
+msgid ""
+"Short values will appear in exported data and are \n"
+"referenced in 'Additional checks' fields.  Numbers, letters \n"
+"or single words are valid."
+msgstr ""
+"Краткие значения появятся в данных экспорта. \n"
+"Допустимы числа, буквы или простые слова."
+
+#: .\templates\questionnaire\choice-yesnocomment.html.py:35
+msgid "comment"
+msgstr "comentar"
+
+#: .\templates\questionnaire\questionset.html.py:58
+msgid "edit"
+msgstr "Editar"
+
+#: .\templates\questionnaire\questionset.html.py:95
+msgid "Continue"
+msgstr "Continuar"
+
+#: .\templates\questionnaire\questionset.html.py:100
+msgid "return to previous page"
+msgstr "Página anterior"

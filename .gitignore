@@ -1,0 +1,138 @@
+# In case you are using django and git, here is my .gitignore file which excludes all python related temporary files and keeps your repo clean
+*~
+*.orig
+*.rej
+.installed.cfg
+__minitage__*
+downloads
+log
+tmp
+static/**/*.json
+venv
+staticfiles
+*.swp
+src/*.egg-info
+
+# Public Repositories
+# settings.py
+# Custom local settings file keep the local secrets safe
+**/settings/local.py
+
+media/uploads
+media/temp
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+
+# OSX Finder turds
+.DS_Store
+
+# C extensions
+*.so
+
+# Distribution / packaging
+site_media/
+# FAIL
+# migrations/
+# Ignore migrations tmp files
+*/migrations/*
+!*/migrations/__init__.py
+.Python
+env/
+bin/
+build/
+develop-eggs/
+# Solo carpeta dist del directorio raíz
+/dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+demos/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+htmlcov/
+
+# Translations
+*.mo
+*.pot
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+*.iml
+
+## File-based project format:
+*.ipr
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+# PyCharm
+.idea/
+
+# Default Database
+db.sqlite3
+
+# Personal ignore
+DER/
+
+# Configuration Files
+conf/var/log/
+conf/var/run/
+conf/server/static/
+conf/server/media/

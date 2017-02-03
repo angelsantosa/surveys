@@ -1,0 +1,81 @@
+{% load widget_tweaks %}
+<div class="row">
+        <div class="col-sm-12 padding-10">
+            <label for="nivel_taller">
+                <i class="fa fa-flag fa-lg"></i>
+                {{ form.nivel_taller.label }}
+            </label>
+            {% render_field form.nivel_taller class+="form-control" id=form.nivel_taller.html_name %}
+            {{ form.nivel_taller.errors }}
+        </div>
+        <div class="col-sm-12 padding-10">
+            <label for="tipo_taller">
+                <i class="fa fa-file-text-o fa-lg"></i>
+                {{ form.tipo_taller.label }}
+            </label>
+            {% render_field form.tipo_taller class+="form-control" id=form.tipo_taller.html_name %}
+            {{ form.tipo_taller.errors }}
+        </div>
+        <div class="col-sm-12 padding-10">
+            <label for="fecha_taller">
+                    <i class="fa fa-calendar fa-lg"></i>
+                    {{ form.fecha_taller.label }}
+            </label>
+            {{ form.fecha_taller.errors }}
+            {% render_field form.fecha_taller class+="form-control" id=form.fecha_taller.html_name  %}
+        </div>
+        </div>
+<div class="row">
+        <div class="col-sm-10 padding-10">
+            <label for="sede">
+                <i class="fa fa-building-o fa-lg"></i>
+                {{ form.sede.label }}
+            </label>
+            {{ form.sede.errors }}
+            {% render_field form.sede class+="form-control" id=form.sede.html_name %}
+        </div>
+
+        <div class="col-sm-2 padding-10">
+        <label for="sede">
+                <i class="fa fa-building-o fa-lg"></i>
+                {{ form.sede.label }}
+            </label>
+        <a class="btn btn-dark-purple form-control" href="{% url 'sede' %}"><i class="fa fa-plus"></i> Añadir Sede</a>  
+        </div>
+</div>
+<div class="row">
+        <div class="col-sm-12 padding-10">
+            <label for="instructor">
+                <i class="fa fa-graduation-cap fa-lg"></i>
+                {{ form.instructor.label }}
+            </label>
+            {% render_field form.instructor class+="form-control" id=form.instructor.html_name %}
+            {{ form.instructor.errors }}
+        </div>
+        <div class="col-sm-12 padding-10">
+            <label for="apoyo">
+                <i class="fa fa-support fa-lg"></i>
+                {{ form.apoyo.label }}
+            </label>
+            {% render_field form.apoyo class+="form-control" id=form.apoyo.html_name %}
+            {{ form.apoyo.errors }}
+        </div>
+        <div class="col-sm-12 padding-10">
+            <label for="contacto">
+                <i class="fa fa-user fa-lg"></i>
+                {{ form.contacto.label }}
+            </label>
+            {% render_field form.contacto class+="form-control" id=form.contacto.html_name %}
+            {{ form.contacto.errors }}
+        </div>
+</div>
+<div class="row">
+        <div class="col-sm-12 padding-10">
+            <label for="clave">
+                <i class="fa fa-key fa-lg"></i>
+                {{ form.clave.label_tag }}
+            </label>
+            {% render_field form.clave class+="form-control" id=form.contacto.html_name %}
+            {{ form.clave.errors }}
+        </div>
+        </div>

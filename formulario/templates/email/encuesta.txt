@@ -1,0 +1,21 @@
+Estimado {{ usuario }},
+
+Le notificamos que se ha generado la encuesta para el taller con los siguientes datos:
+
+    Nivel taller:	{{ nivel_taller }}
+    Tipo taller:	{{ tipo_taller }}
+    Fecha taller:	{{ fecha_taller }}
+    Sede:	        {{ sede }}
+    Instructor:	    {{ instructor }}
+    Apoyo:	        {{ apoyo }}
+    Contacto:	    {{ contacto }}
+    {% if clave %}
+    Contacto:	    {{ clave }}
+    {% endif %}
+
+La URL que debe utilizar para contestar la encuesta relacionada a este taller es:
+
+    {{ url }}
+
+Atentamente:
+CACEI: Consejo de Acreditación de la Enseñanza de la Ingeniería, A. C.

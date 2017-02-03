@@ -1,0 +1,55 @@
+{% extends "site_base.html" %}
+
+{% load staticfiles %}
+{% load url from future %}
+{% load bootstrap %}
+
+{% block extra_script %}
+ 	
+{% endblock %}
+{% block head_title %}Inicio{% endblock %}
+{% block extra_script_ready %}
+{% endblock %}
+
+{% block body %}
+					<div class="jumbotron">
+						<h1>Asistente para la Creación de Encuestas de los Talleres.</h1>
+						<p class="lead">
+							Herramienta para la creación y seguimiento de encuestas para los talleres programados, la explotación de datos y envío de comentarios a las áreas correspondientes ya sean internas o externas.
+						</p>
+					</div>
+
+					<div class="col-md col-md-offset-3" >
+						<div class="row space">
+							<div class="col-lg-4">
+								<h2>Crear Encuestas</h2>
+								<p  style="padding-bottom: 19px;">
+									Desde esta sección, usted podrá crear las encuestas para los talleres que el CACEI tiene programados, detallando nivel y tipo de taller, fecha y sede; así como el personal involucrado.
+								</p>
+								<p>
+									<a role="button"  href="{% url 'formulario' %}" class="btn btn-primary">
+										Nueva Encuesta
+										<i class="fa fa-plus-square-o fa-lg"></i>
+									</a>
+
+								</p>
+							</div>
+							<div class="col-lg-4">
+								<h2>Listar Encuestas</h2>
+								<p>
+									Desde esta sección usted podrá listar todas las encuestas que se han programado, en las cuales podrá: revisar los resultados de cada encuesta de forma general y detallada, así como realizar en análisis de comentarios y enviarlos a sus múltiples destinatarios.
+								</p>
+								<p>
+									<a role="button" href="{% url 'listado' %}" class="btn btn-dark-orange">
+										Listado de encuestas
+										<i class="fa fa-th-list fa-lg"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+{% endblock %}
+
+{% block nav %}
+{% include "_menu.html" with a_index="active" %}
+{% endblock %}

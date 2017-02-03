@@ -1,0 +1,30 @@
+{% extends "site_base.html" %}
+
+{% load staticfiles %}
+
+{% block extra_style %}
+    <link rel="stylesheet" media="screen" href="{% static 'plugins/bootstrap-datetimepicker/css/datetimepicker.css' %}">
+{% endblock %}
+
+{% block extra_script %}
+    <script type="text/javascript" src="{% static 'plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js' %}"></script>
+{% endblock %}
+
+{% block extra_script_ready %}
+    $('#fecha_taller').datetimepicker({
+        'language':  'es',
+        'weekStart': 1,
+        'todayBtn':  1,
+		'autoclose': 1,
+		'todayHighlight': 1,
+		'startView': 2,
+		'forceParse': 0,
+        'showMeridian': 1,
+        'startDate': new Date(),
+    });
+    $("#nivel_taller").focus();
+{% endblock %}
+{% block nav %}
+{% include "_menu.html" with a_crear="active" %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "formulario_base.html" %}
+
+{% block body %}
+
+<form role="form" id="user_encuesta_form" autocomplete="off" class="form-register" method="post" autocapitalize="off">
+
+{% csrf_token %}
+
+<h3>
+Asistente para Generaci&oacute;n de Encuestas de Satisfacci&oacute;n CACEI
+</h3>
+
+{{ form.non_field_errors }}
+<div class="errorHandler alert alert-danger no-display">
+    <i class="fa fa-remove-sign"></i> Errores en el formulario, verifique
+</div>
+
+{% include "formulario_campos.html" %}
+<div class="col-sm-12">
+<input type="hidden" name="{{ stage_field }}" value="1" />
+<button class="btn btn-primary pull-right" type="submit">Revisar</button>
+</div>
+</form>
+
+{% endblock %}

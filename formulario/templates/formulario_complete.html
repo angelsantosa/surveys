@@ -1,0 +1,39 @@
+{% extends "site_base.html" %}
+
+{% load staticfiles %}
+{% load bootstrap %}
+
+{% block extra_script %}
+{% endblock %}
+
+{% block body %}
+
+<h3>
+	Asistente para Generaci&oacute;n de Encuestas de Satisfacci&oacute;n CACEI
+</h3><br>
+
+
+<div class="alert alert-success">
+	<strong>
+		{% for message in messages %}
+			{{ message }}
+		{% endfor %}
+	</strong>
+</div>
+
+<p>La siguiente URL será envíada a los involucrados en el proceso de operación:</p>
+
+<div class="jumbotron">
+	{% url 'presentacion' url_id as url_cuestionario %}
+	<h1><a target="_blank" href="{{ url_cuestionario }}">{{ url_cuestionario }}</a></h1>
+</div>
+
+<a href="{% url 'formulario' %}" class="btn btn-primary pull-right" type="submit">
+	Nueva Encuesta
+	<i class="fa fa-plus-square-o fa-lg"></i>
+</a>
+
+{% endblock %}
+{% block nav %}
+{% include "_menu.html" with a_crear="active" %}
+{% endblock %}

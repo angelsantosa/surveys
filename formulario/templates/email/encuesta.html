@@ -1,0 +1,52 @@
+<div class="panel-body" style="width:880px;margin-left:170px;">
+	<div class="panel panel-white">
+		<div class="panel-body">
+			<div class="panel-scroll height-200 ps-container">
+				<!-- content -->
+				<p>Estimado {{ usuario }},</p>
+				<p>Le notificamos que se ha generado la encuesta para el taller con los siguientes datos:</p>
+				<table>
+					<tr>
+                        <th style="width:120px">Nivel taller:</th>
+                        <td>{{ nivel_taller }}</td>
+					</tr>
+                    <tr>
+                        <th style="width:120px">Tipo taller:</th>
+                        <td>{{ tipo_taller }}</td>
+					</tr>
+                    <tr>
+                        <th style="width:120px">Fecha taller:</th>
+                        <td>{{ fecha_taller }}</td>
+					</tr>
+                    <tr>
+                        <th style="width:120px">Sede:</th>
+                        <td>{{ sede }}</td>
+					</tr>
+                    <tr>
+                        <th style="width:120px">Instructor:</th>
+                        <td>{{ instructor }}</td>
+					</tr>
+                    <tr>
+                        <th style="width:120px">Apoyo:</th>
+                        <td>{{ apoyo }}</td>
+					</tr>
+                    <tr>
+                        <th style="width:120px">Contacto:</th>
+                        <td>{{ contacto }}</td>
+					</tr>
+					{% if clave %}
+					<tr>
+                        <th style="width:120px">Clave - Formato:</th>
+                        <td>{{ clave }}</td>
+					</tr>
+					{% endif %}
+				</table><br>
+				<p>La URL que debe utilizar para contestar la encuesta relacionada a este taller es:</p>
+				<p>{{ url }}</p>
+				<p>Atentamente:<br>CACEI: Consejo de Acreditaci&oacute;n de la Enseñanza de la Ingenier&iacute;a, A. C.</p>
+
+				<!-- /content -->
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,160 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load humanize %}
+{% load staticfiles %}
+{% load url from future %}
+{% load bootstrap %}
+
+{% block extra_style %}
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/bootstrap-modal/css/bootstrap-modal.css' %}">
+{% endblock %}
+
+{% block extra_script %}
+ 	
+{% endblock %}
+
+{% block extra_script_ready %}
+$('form .submit-link').on({
+    click: function (event) {
+        event.preventDefault();
+        $(this).closest('form').submit();
+		console.log("Spooky");
+    }
+});
+// Modal event
+var infoModal = $('#encuesta_detalle');
+$('.detail').on('click', function() {
+		htmlData = $(this).closest('form').find('.profile').html();
+		infoModal.find('.content-detail').html(htmlData);
+		infoModal.modal('show');
+		return false;
+});
+{% endblock %}
+
+{% block body %}
+	<h3>
+		Listado de encuestas
+	</h3>
+
+	<div class="panel panel-white">
+		<div class="panel-body">
+			<table class="table table-hover" id="sample-table-1">
+				<thead>
+					<tr>
+						<th>Nivel de taller</th>
+						<th>Tipo de taller</th>
+						<th>Fecha de taller</th>
+						<th>Sede</th>
+						<th>Estado</th>
+						<th>Recibidas</th>
+						<th>URL</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for formulario in formularios %}
+						<tr>
+							<td>{{formulario.nivel_taller}}</td>
+							<td>{{formulario.tipo_taller}}</td>
+							<td>{{formulario.fecha_taller}}</td>
+							<td>{{formulario.sede}}</td>
+							<td>{{formulario.get_estado_display}}</td>
+							<td><center>{{ formulario.received_count|intcomma }}</center></td>
+							<td><a target="_blank" href="{% url 'presentacion' formulario.cuestionario.id %}">taller/{{formulario.cuestionario.id}}</a></td>
+							<td>
+								<form role="form" id="estado_encuesta_form" autocomplete="off" method="post" autocapitalize="off">
+									{% include "_profile.html" %}
+									{% csrf_token %}
+									<input class="hidden" type="hidden" name="formulario" value="{{formulario.id}}"/>
+									<input class="hidden" type="hidden" name="estado" value="{{formulario.get_reverse_action}}"/>
+									<div class="visible-md visible-lg hidden-sm">
+										{% if formulario.esta_abierta %}
+										<a href="" class="btn btn-xs btn-dark-red tooltips submit-link" data-placement="top" data-original-title="Cerrar encuesta"><i class="fa fa-folder-o fa-lg"></i>
+										</a>
+										{% else %}
+										<a href="" class="btn btn-xs btn-dark-yellow tooltips submit-link" data-placement="top" data-original-title="Abrir encuesta"><i class="fa fa-folder-open fa-lg"></i>
+										</a>
+										{% endif %}
+										<a href="#encuesta_detalle" data-toggle="modal" class="btn btn-xs btn-dark-orange tooltips detail" data-placement="top" data-original-title="Detalles de encuesta"><i class="fa fa-book fa-lg"></i>
+										</a>
+										<a href="{% url 'resultado' formulario.cuestionario.id formulario.first_questionset %}" class="btn btn-xs btn-success tooltips" data-placement="top" data-original-title="Resultados de encuesta"><i class="fa fa-edit fa-lg"></i>
+										</a>
+										<a href="{% url 'analisis_comentarios' formulario.cuestionario.id formulario.first_questionset_open %}" class="btn btn-xs btn-info tooltips" data-placement="top" data-original-title="An&aacute;lisis comentarios"><i class="fa fa-share fa-lg"></i>
+										</a>
+									</div>
+									<div class="visible-xs visible-sm hidden-md hidden-lg">
+										<div class="btn-group">
+
+											<a class="btn btn-green dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+												<i class="fa fa-cog"></i> <span class="caret"></span>
+											</a>
+											<ul role="menu" class="dropdown-menu pull-right dropdown-dark">
+												<li>
+													{% if formulario.esta_abierta %}
+													<a role="menuitem" tabindex="-1" href="" class="submit-link">
+														<i class="fa fa-folder-o fa-lg"></i> Cerrar de encuesta
+													</a>
+													{% else %}
+													<a role="menuitem" tabindex="-1" href="" class="submit-link">
+														<i class="fa fa-folder-open fa-lg"></i> Abrir de encuesta
+													</a>
+													{% endif %}
+												</li>
+												<li>
+													<a role="menuitem" tabindex="-1" href="#encuesta_detalle" data-toggle="modal" class="detail">
+														<i class="fa fa-book fa-lg"></i> Detalles de encuesta
+													</a>
+												</li>
+												<li>
+													<a role="menuitem" tabindex="-1" href="{% url 'resultado' formulario.cuestionario.id formulario.first_questionset %}">
+														<i class="fa fa-edit fa-lg"></i> Resultados de encuesta
+													</a>
+												</li>
+												<li>
+													<a role="menuitem" tabindex="-1" href="{% url 'analisis_comentarios' formulario.cuestionario.id formulario.first_questionset_open %}">
+														<i class="fa fa-share fa-lg"></i> Análisis de comentarios
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- start: BOOTSTRAP EXTENDED MODALS -->
+	<div id="encuesta_detalle" class="modal extended-modal fade no-display" tabindex="-1" data-width="760">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title">Detalles de encuesta</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row content-detail">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn btn-success">
+						Cerrar
+						<i class="fa fa-check fa-lg"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block nav %}
+{% include "_menu.html" with a_listar="active" %}
+{% endblock %}

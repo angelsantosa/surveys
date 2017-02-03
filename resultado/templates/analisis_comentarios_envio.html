@@ -1,0 +1,33 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+{% load url from future %}
+
+{% block body %}
+	<h3>
+		ANÁLISIS DE COMENTARIOS ENVÍO {{status|upper}}
+	</h3>
+
+	<a id="listado" href="{% url 'listado' %}" type="button" class="btn btn-light-grey">
+		Listado de encuestas
+		<i class="fa fa-th-list fa-lg"></i>
+	</a>
+
+	<br/><br/>
+
+	<div class="alert alert-success">
+		<strong>
+			{% for message in messages %}
+				{{ message }}
+			{% endfor %}
+		</strong>
+	</div>
+
+	<p>El proceso de análisis de comentarios ha concluido exitosamente.</p>
+
+{% endblock %}
+
+{% block nav %}
+{% include "_menu.html" %}
+{% endblock %}

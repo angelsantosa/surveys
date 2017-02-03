@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+{% load url from future %}
+
+{% block title %}Encuesta finalizada!{% endblock title %}
+{% block headextra %}<meta http-equiv="refresh" content="10;URL=http://{{ SITE_DOMAIN }}">{% endblock %}
+{% block div-page-header %}<h2>El CACEI agradece tu tiempo para responder esta encuesta.</h2><br />{% endblock div-page-header %}
+
+{% block content %}
+<p style="font-size:large;">Tu opinión es muy importate para nosotros, la información que nos has porporcionado es completamente <b>confidencial</b>.</p>
+<br />
+<p style="font-size:large;">Cualquier sugerencia o comentario te pedimos nos envíes un correo a <a target="_blank" href="mailto:contacto@cacei.org.mx">contacto@cacei.org.mx</a>.</p>
+<br /><br />
+<p><b>Serás redireccionado en <span id="timeLeft">11</span> segundos a la página del CACEI</b></p>
+{% endblock %}
+
+{% block extra_script_ready %}
+    window.setInterval(function() {
+        var timeLeft    = $("#timeLeft").html();
+                $("#timeLeft").html(parseInt(timeLeft)- parseInt(1));
+    }, 1000); 
+{% endblock %}

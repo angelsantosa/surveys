@@ -1,0 +1,78 @@
+{% extends "formulario_base.html" %}
+
+{% load i18n %}
+
+{% block body %}
+
+<h3>
+Asistente para Generaci&oacute;n de Encuestas de Satisfacci&oacute;n CACEI
+</h3>
+
+<p>Verifique que los datos sean satisfactorios</p>
+
+<div class="panel-body" style="width:880px;margin-left:170px;">
+	<div class="panel panel-white">
+		<div class="panel-body">
+			<div class="panel-scroll height-200 ps-container">
+				<!-- content -->
+				<p>Estimado @usuario,</p>
+				<p>Le notificamos que se ha generado la encuesta para el taller con los siguientes datos:</p>
+				<table>
+					{% for data in preview_data %}
+					<tr>
+                        <th style="width:120px">{{ data.label }}:</th>
+                        <td>
+							{% if data.value %}
+								{{ data.value }}
+							{% else %}
+								<i>Sin especificar</i>
+							{% endif %}
+						</td>
+					</tr>
+					{% endfor %}
+				</table><br>
+				<p>La URL que debe usar para contestar la encuesta relacionada a este taller es:</p>
+				<p>@url</p>
+				<p>Atentamente:<br>CACEI</p>
+				
+				<!-- /content -->
+				<!-- scroll -->
+				<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; width: 446px; display: none;">
+					<div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+				</div>
+				<div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 250px; display: inherit;">
+					<div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div>
+				</div>
+				<!-- /scroll -->
+			</div>
+		</div>
+	</div>	
+</div>
+
+<form role="form" id="user_preview_form" autocomplete="off" class="form-register" method="post" autocapitalize="off">
+{% csrf_token %}
+{% for field in form %}
+    {{ field.as_hidden }}
+{% endfor %}
+<input type="hidden" name="{{ stage_field }}" value="2" />
+<input type="hidden" name="{{ hash_field }}" value="{{ hash_value }}" />
+<p><button class="btn btn-primary pull-right" type="submit">Guardar</button></p>
+</form>
+
+<form role="form" id="user_encuesta_form" autocomplete="off" class="form-register" method="post" autocapitalize="off">
+    {% csrf_token %}
+<h3>
+Modificar
+</h3>
+<p>Haga los cambios requeridos</p>
+
+{% include "formulario_campos.html" %}
+
+<input type="hidden" name="{{ stage_field }}" value="1" />
+<p><button class="btn btn-primary pull-right" type="submit">Revisar</button></p>
+</form>
+
+{% endblock %}
+{% block nav %}
+{% include "_menu.html" with a_crear="active" %}
+{% endblock %}
